@@ -5,4 +5,4 @@ RUN apt-get upgrade
 RUN apt-get install apt-utils
 
 RUN apt-get install postgresql
-RUN ls /etc/postgresql
+RUN ls /etc/postgresql/9.4/
