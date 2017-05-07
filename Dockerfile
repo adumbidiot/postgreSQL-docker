@@ -15,9 +15,6 @@ RUN echo "host all  all    0.0.0.0/0  md5" >> /etc/postgresql/9.4/main/pg_hba.co
 RUN echo "listen_addresses='*'" >> /etc/postgresql/9.4/main/postgresql.conf
 EXPOSE 5432
 
-VOLUME  /etc/postgresql
-VOLUME /var/log/postgresql 
 VOLUME /var/lib/postgresql
-VOLUME /usr/local/pgsql/data
 
 CMD /usr/lib/postgresql/9.4/bin/postgres -D /var/lib/postgresql/9.4/main -c config_file=/etc/postgresql/9.4/main/postgresql.conf
