@@ -10,7 +10,7 @@ RUN echo "host all  all    0.0.0.0/0  md5" >> /etc/postgresql/9.4/main/pg_hba.co
 RUN echo "listen_addresses='*'" >> /etc/postgresql/9.4/main/postgresql.conf
 ADD ./postgresql.conf /etc/postgresql/9.4/main/postgresql.conf
 
-USER postgres
+#USER postgres
 RUN    /etc/init.d/postgresql start &&\
     psql --command "CREATE USER docker WITH SUPERUSER PASSWORD 'docker';" &&\
     createdb -O docker docker
