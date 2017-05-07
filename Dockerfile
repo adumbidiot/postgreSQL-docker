@@ -16,5 +16,5 @@ RUN echo "listen_addresses='*'" >> /etc/postgresql/9.4/main/postgresql.conf
 EXPOSE 5432
 
 VOLUME /var/database
-
+RUN cat /etc/postgresql/9.4/main/postgresql.conf
 CMD /usr/lib/postgresql/9.4/bin/postgres -D /var/database -c config_file=/etc/postgresql/9.4/main/postgresql.conf
